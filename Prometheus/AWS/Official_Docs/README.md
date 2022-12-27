@@ -2,15 +2,21 @@
 
 - 노션 페이지 생성일: 2022.12.27
 
+<br>
+
 ## Main docs URL:
 
 [](https://docs.aws.amazon.com/prometheus/?icmpid=docs_homepage_mgmtgov)
+
+<br>
 
 ## User guide URL:
 
 [What is Amazon Managed Service for Prometheus?](https://docs.aws.amazon.com/prometheus/latest/userguide/what-is-Amazon-Managed-Service-Prometheus.html)
 
 - [공식소개] 글과 겹치는 내용은 생략
+
+<br>
 
 ## Supported Regions:
 
@@ -25,6 +31,8 @@
 - Europe (London)
 - Europe (Stockholm)
 
+<br>
+
 ### Pricing:
 
 - Ingestion and storage of metrics
@@ -32,12 +40,16 @@
 
 [Amazon Managed Service for Prometheus Pricing | Fully Managed Prometheus | Amazon Web Services](https://aws.amazon.com/ko/prometheus/pricing/)
 
+<br>
+
 # Getting started:
 
 ### 기본 작업:
 
 - 계정 생성
 - IAM 사용자 및 key 생성
+
+<br>
 
 ## 프로메테우스 작업:
 
@@ -47,13 +59,18 @@
 - Workspace에 프로메테우스 메트릭 ingest
 - 프로메테우스 메트릭 query
 
+<br>
+
 ## Create a workspace:
 
 ### Workspace:
 
 - A workspace is a logical space dedicated to the storage and querying of Prometheus metrics.
 
-AWS CLI를 활용한 설치 방법
+
+<br>
+
+### AWS CLI를 활용한 설치 방법
 
 ```python
 # Workspace alias 설정
@@ -67,6 +84,8 @@ aws amp create-workspace [ --alias my-first-workspace]
 aws amp describe-workspace --workspace-id my-workspace-id
 ```
 
+<br>
+
 ## Ingest Prometheus metrics to the workspace:
 
 ### Remote write:
@@ -76,6 +95,9 @@ Ingesting metrics is done using Prometheus remote write.
 Remote write enables the sending of samples to a remote storage destination.
 
 [Configuration | Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write)
+
+
+<br>
 
 ### Secure the ingestion of your metrics
 
@@ -92,7 +114,9 @@ Remote write enables the sending of samples to a remote storage destination.
         [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
         
 
-### **Ingestion methods and how to set them up~~(두 가지 방법)~~**
+<br>
+
+### **Ingestion methods and how to set them up**
 
 - Ingest metrics from a Prometheus server
 - Use AWS Distro for OpenTelemetry
