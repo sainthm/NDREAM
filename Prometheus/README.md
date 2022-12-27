@@ -32,7 +32,7 @@
 
 ### 작동방식:
 
-![Untitled](Image_source/Untitled.png)
+![Untitled](Image_source/HTW.png)
 
 - 통합 AWS 서비스: EKS, ECS, AWS Distro for Open Telemetry
 
