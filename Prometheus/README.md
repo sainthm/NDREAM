@@ -2,11 +2,13 @@
 
 - 노션 페이지 생성일: 2022.12.26
 
+<br>
 
 
 **Main URL:**  [오픈 소스 모니터링 - Amazon Managed Service for Prometheus - Amazon Web Services](https://aws.amazon.com/ko/prometheus/)
 
-
+<br>
+<br>
 
 ## 컨테이너식 시스템을 이한 안전한 고가용성 관리형 모니터링
 
@@ -25,11 +27,17 @@
     - Upgrading
     - Scaling
 
+<br>
+<br>
+
 ### 작동방식:
 
 ![Untitled](Image_source/Untitled.png)
 
 - 통합 AWS 서비스: EKS, ECS, AWS Distro for Open Telemetry
+
+<br>
+<br>
 
 ### Use cases:
 
@@ -44,6 +52,9 @@ In data analysis and statistics, high-cardinality refers to a situation in which
 
 High-cardinality variables can be challenging to work with in data analysis, because they can produce sparse data matrices, which can make it difficult to detect patterns or trends. In addition, they can be computationally intensive to work with, because they may require more memory or processing power. To deal with high-cardinality variables, data scientists may need to use specialized techniques, such as dimensionality reduction or aggregating the data in some way.
 ```
+
+<br>
+<br>
 
 ## FAQs
 
