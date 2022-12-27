@@ -1,4 +1,4 @@
-# [공식소개]Amazon Managed Service for Prometheus
+# [공식소개페이지]Amazon Managed Service for Prometheus
 
 - 노션 페이지 생성일: 2022.12.26
 
