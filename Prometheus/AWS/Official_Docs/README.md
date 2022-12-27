@@ -204,7 +204,7 @@ helm install prometheus-chart-name prometheus-community/prometheus -n prometheus
 - 설정 적용 시, AMP는 하나의 인스턴스를 leader replica로 설정하고 데이터 샘플을 해당 레플리카를 통해서만 ingest 함
 - Leader replica가 30초 동안 AMP로 데이터 샘플을 보내지 않으면, AMP는 자동으로 다른 프로메테우스 인스턴스를 리더 레플리카로 선정하고 새로운 리더로 부터 데이터를 ingest
 
-- 설정을 위해서 붙여야하는 라벨명: cluster
+- 설정을 위해서 붙여야하는 라벨명: ```cluster```
 - 각각의 레플리카를 그룹에서 구별하기 위해 붙이는 라벨명: ```__replica__```
 - De-duplication 작업을 위해서는 위의 두 개의 라벨이 모두 필요: cluster , ```__replica__```
 
