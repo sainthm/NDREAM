@@ -4,9 +4,7 @@
 
 <br>
 
-## Main docs URL:
-
-[](https://docs.aws.amazon.com/prometheus/?icmpid=docs_homepage_mgmtgov)
+## Main docs URL:[Amazon Managed Service for Prometheus Documentation](https://docs.aws.amazon.com/prometheus/?icmpid=docs_homepage_mgmtgov)
 
 <br>
 
@@ -121,10 +119,17 @@ Remote write enables the sending of samples to a remote storage destination.
 - Ingest metrics from a Prometheus server
 - Use AWS Distro for OpenTelemetry
 
-> 고가용성을 위해, 다수의 프로메테우스 서버(인스턴스)를 생성하여 하나의 AMP workspace로 보낼 경우, deduplication 작업 필요 (겹치는 메트릭에 대해서는 중복으로 과금)
-> 
+<br>
+
+> 고가용성을 위해, 다수의 프로메테우스 서버(인스턴스)를 생성하여 하나의 AMP workspace로 보낼 경우, deduplication 작업 필요 
+> (겹치는 메트릭에 대해서는 중복으로 과금)
+
+<br>
 
 [Send high-availability data with Prometheus or the Prometheus Operator](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-ingest-dedupe.html)
+
+
+<br>
 
 ## **Quick Start: Set up ingestion from a new Prometheus server using Helm:**
 
@@ -132,6 +137,8 @@ Remote write enables the sending of samples to a remote storage destination.
     - Amazon EKS cluster 환경
     - default 설정으로 메트릭 전달
     - Helm CLI 3.0 or later
+
+<br>
 
 ### Step:
 
@@ -166,6 +173,8 @@ server:
         capacity: 2500
 ```
 
+<br>
+
 ```bash
 # Prometheus server 생성 명령어
 
@@ -175,7 +184,9 @@ helm install prometheus-chart-name prometheus-community/prometheus -n prometheus
 -f my_prometheus_values_yaml
 ```
 
-유저가이드 내에 있는 모든 실행 예시
+<br>
+
+### 유저가이드 내에 있는 모든 실행 예시
 
 - **Set up ingestion from a new Prometheus server using Helm**
 - **Set up ingestion from an existing Prometheus server in Kubernetes on EC2**
@@ -183,6 +194,8 @@ helm install prometheus-chart-name prometheus-community/prometheus -n prometheus
 - **Set up metrics ingestion using AWS Distro for Open Telemetry on an Amazon Elastic Kubernetes Service cluster**
 - **Set up metrics ingestion from Amazon ECS using AWS Distro for Open Telemetry**
 - **Set up metrics ingestion from an Amazon EC2 instance using remote write**
+
+<br>
 
 ### **Send high-availability data with Prometheus or the Prometheus Operator**
 
@@ -192,5 +205,10 @@ helm install prometheus-chart-name prometheus-community/prometheus -n prometheus
 - Leader replica가 30초 동안 AMP로 데이터 샘플을 보내지 않으면, AMP는 자동으로 다른 프로메테우스 인스턴스를 리더 레플리카로 선정하고 새로운 리더로 부터 데이터를 ingest
 
 - 설정을 위해서 붙여야하는 라벨명: cluster
-- 각각의 레플리카를 그룹에서 구별하기 위해 붙이는 라벨명: __replica__
-- De-duplication 작업을 위해서는 위의 두 개의 라벨이 모두 필요: cluster , __replica__
+- 각각의 레플리카를 그룹에서 구별하기 위해 붙이는 라벨명: ```__replica__```
+- De-duplication 작업을 위해서는 위의 두 개의 라벨이 모두 필요: cluster , ```__replica__```
+
+
+<br>
+
+
