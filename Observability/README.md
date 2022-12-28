@@ -15,7 +15,7 @@
 
 좋은 monitoring 및 observability 스택의 중요성이 높아지고 있음
 
-![Untitled](Monitoring%E1%84%8B%E1%85%B4%20%E1%84%92%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%A2%E1%84%8B%E1%85%AA%20%E1%84%86%E1%85%B5%E1%84%85%E1%85%A2,%20%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%84%80%E1%85%A9%20Observability%202db3cf8eb2574507b8c70e0ef5bc4e04/Untitled.png)
+![Observability](Image_source/Observability.png)
 
 ## Observability (관측 가능성)
 
