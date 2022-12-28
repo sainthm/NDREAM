@@ -17,12 +17,17 @@
 
 좋은 monitoring 및 observability 스택의 중요성이 높아지고 있음
 
+
 ![Observability](Image_source/Observability.png)
+
+<br>
 
 ## Observability (관측 가능성)
 
 > 기존 모니터링으로 감지하는 메트릭과 로그 같은 사전 정의 항목뿐만 아니라 정의할 수 없는 여러 가지 항목 및 패턴 그리고 변경된 형상을 추적, 교정하는 방법을 제시해주는 기술 혹은 방법의 집합
 > 
+
+<br>
 
 ### 궁극적인 목표: 모든 구성원이 시스템에 대한 가시성을 확보하는 것
 
