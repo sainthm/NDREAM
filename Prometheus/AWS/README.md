@@ -6,7 +6,6 @@
 - **Main URL:**  [오픈 소스 모니터링 - Amazon Managed Service for Prometheus - Amazon Web Services](https://aws.amazon.com/ko/prometheus/)
 
 
-<br>
 
 ## Official_Docs
 - AWS의 공식 유저 가이드 내용 요약
