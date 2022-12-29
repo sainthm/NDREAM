@@ -10,7 +10,7 @@
 
 ## Official_Docs
 - AWS의 공식 유저 가이드 내용 요약
-- [What is Amazon Managed Service for Prometheus?](https://docs.aws.amazon.com/prometheus/latest/userguide/what-is-Amazon-Managed-Service-Prometheus.html)
+- **Main URL:** [What is Amazon Managed Service for Prometheus?](https://docs.aws.amazon.com/prometheus/latest/userguide/what-is-Amazon-Managed-Service-Prometheus.html)
 
 
 
