@@ -23,11 +23,12 @@
 - Maintain consistent response times for large container deployments
 - AWS 보안 서비스와 통합
 - Standalone Prometheus 서버에 대한 운영 비용 절감
-    - Configuring
-    - Upgrading
-    - Scaling
+  - Configuring
+  - Upgrading
+  - Scaling
 
 <br>
+
 <br>
 
 ### 작동방식:
