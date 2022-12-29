@@ -12,7 +12,7 @@
 
 [What is Amazon Managed Service for Prometheus?](https://docs.aws.amazon.com/prometheus/latest/userguide/what-is-Amazon-Managed-Service-Prometheus.html)
 
-- [공식소개페이지](https://github.com/sainthm/NDREAM/tree/main/Prometheus/AWS/Official_Introduction) 글과 겹치는 내용은 생략
+- [공식 소개 페이지 글](https://github.com/sainthm/NDREAM/tree/main/Prometheus/AWS/Official_Introduction)과 겹치는 내용은 생략
 
 <br>
 
