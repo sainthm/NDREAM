@@ -16,9 +16,9 @@
 
 - Prometheus 쿼리 언어(PromQL) 사용
 - Self-managed k8s 클러스터 관리 가능 (고유 시계열 지표)
-    - Filter
-    - Aggregate
-    - Ingest
+  - Filter
+  - Aggregate
+  - Ingest
 - Automatically scale
 - Maintain consistent response times for large container deployments
 - AWS 보안 서비스와 통합
