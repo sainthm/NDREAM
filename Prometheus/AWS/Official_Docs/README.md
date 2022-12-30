@@ -214,3 +214,9 @@ helm install prometheus-chart-name prometheus-community/prometheus -n prometheus
 <br>
 
 
+### **Send high-availability data to Amazon Managed Service for Prometheus with the Prometheus community Helm chart**
+
+- 헬름 차트를 이용한 고가용성 설정 방법
+- external_labels 설정을 통해 HA 구성임을 명시적으로 표현 필요
+- Multiple replicas 구성을 위해서는 명시적으로 다른 레플리카 값으로 여러번 배포해야함
+  - replica 라벨에 대해 auto-set 적용을 위해서는 prometheus-operator Helm chart 활용 필요
