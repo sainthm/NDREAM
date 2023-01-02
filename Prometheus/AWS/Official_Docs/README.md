@@ -221,3 +221,149 @@ helm install prometheus-chart-name prometheus-community/prometheus -n prometheus
 - Multiple replicas 구성을 위해서는 명시적으로 다른 레플리카 값으로 여러번 배포해야함
   - replica 라벨에 대해 auto-set 적용을 위해서는 prometheus-operator Helm chart 활용 필요
 
+
+```yaml
+server:
+  global:
+      external_labels:
+          cluster: monitoring-cluster
+          __replica__: replica-1
+```
+
+# **Query your Prometheus metrics**
+
+- 메트릭 들이 워크스페이스에 ingest 된 후, 메트릭에 대한 쿼리 가능
+    - 그라파나 등을 사용하여 메트릭을 쿼리 가능
+    - AMP API 사용 가능
+- PromQL을 활용하여 쿼리 가능
+
+[Querying basics | Prometheus](https://prometheus.io/docs/prometheus/latest/querying/basics/)
+
+### Securing your metric queries
+
+- Public internet endpoint 활용
+- AWS PrivateLink 활용
+
+### Authentication and authorization
+
+- IAM 사용
+    - AMP 생성 중 IAM Role 생성 (Grafana server 에서 AMP 워크스페이스 지표 쿼리 허용 관련)
+- AWS SigV4 사용
+
+### **Set up Amazon Managed Grafana for use with Amazon Managed Service for Prometheus**
+
+- AMG 콘솔에서 AMP 워크스페이스를 데이터 소스로 선택 가능
+- AMP의 alert 들을 AMG에서 확인 가능
+
+### ****Connecting to Amazon Managed Grafana in a private VPC****
+
+- AMP는 AMG를 연결하기 위한 서비스 엔드포인트 제공
+- Private VPC에서 AMG를 설정 가능
+    - 해당 VPC는 AMP 서비스 엔드포인트에 액세스 불가능
+    - 이를 해결하기위해서는 specific private VPC 활용 필요
+        - AMP를 VPC 엔드포인트(interface endpoint)가 있는 동일한 VPC에 연결
+            
+            [Using Amazon Managed Service for Prometheus with interface VPC endpoints](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-and-interface-VPC.html#create-VPC-endpoint-for-AMP)
+            
+
+### Set up Grafana open source or Grafana Enterprise for use with Amazon Managed Service for Prometheus
+
+- 그라파나 7.3.5 버전 및 그 이후 버전 지원
+
+### ****Set up AWS SigV4****
+
+- 자체 관리 그라파나 or 그라파나 엔터프라이즈 서버를 사용할 경우 아래 절차 진행
+- 그라파나 데이터 소스에 대한 SigV4 인증을 통한 AMP 인증 & 인가 capability 강화 가능
+
+```bash
+# Linux
+export AWS_SDK_LOAD_CONFIG=true
+
+export GF_AUTH_SIGV4_AUTH_ENABLED=true
+
+cd grafana_install_directory
+
+./bin/grafana-server
+```
+
+```bash
+# Windows
+set AWS_SDK_LOAD_CONFIG=true
+
+set GF_AUTH_SIGV4_AUTH_ENABLED=true
+
+cd grafana_install_directory
+
+.\bin\grafana-server.exe
+```
+
+## ****Add the Prometheus data source in Grafana****
+
+[Set up Grafana open source or Grafana Enterprise for use with Amazon Managed Service for Prometheus](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-query-standalone-grafana.html#AMP-onboard-query-standalone-grafana-datasource)
+
+![Untitled](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled.png)
+
+![Untitled](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled%201.png)
+
+- 설정 예시 이미지
+- 설정 완료 후, 아래의 샘플 쿼리 실행 (PromQL)
+
+```bash
+prometheus_tsdb_head_series
+```
+
+### ****Troubleshooting if Save & Test doesn't work****
+
+[Set up Grafana open source or Grafana Enterprise for use with Amazon Managed Service for Prometheus](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-query-standalone-grafana.html#AMP-onboard-standalone-grafana-troubleshoot)
+
+### 번외. 프로메테우스와 그라파나 최신 버전 체크
+
+- 프로메테우스
+
+![Untitled](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled%202.png)
+
+- 그라파나
+
+![Untitled](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled%203.png)
+
+## **Query using Grafana running in an Amazon EKS cluster**
+
+- AMP와 그라파나를 연동하기 위해서는 **AmazonPrometheusQueryAccess** 정책이 있는 계정으로 로그인하거나 아래의 권한이 있어야함
+    - `aps:QueryMetrics`
+    - `aps:GetMetricMetadata`
+    - `aps:GetSeries`
+    - `aps:GetLabels`
+
+### ****Set up AWS SigV4****
+
+```bash
+# amp_query_override_values.yaml - grafana 설정 파일에 아래 내용 추가
+
+# annotations 항목 수정 필요
+## account-id 수정, 그라파나 서버가 돌고 있는 계정
+## amp-iamproxy-query-role 수정
+
+serviceAccount:
+    name: "amp-iamproxy-query-service-account"
+    annotations:
+        eks.amazonaws.com/role-arn: "arn:aws:iam::account-id:role/amp-iamproxy-query-role"
+grafana.ini:
+  auth:
+    sigv4_auth_enabled: true
+```
+
+### ****Set up IAM roles for service accounts****
+
+- Grafana 서버를 EKS 클러스터에서 돌린다면 service account IAM role 사용을 권장 (service role)
+    
+    [IAM roles for service accounts](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html)
+    
+- 쿼리를 위한 service role이 없을 경우, 아래 링크를 참고하여 생성
+    
+    [Set up IAM roles for service accounts](https://docs.aws.amazon.com/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-query)
+    
+- 준비되었다면 grafana service account를 신뢰 관계
+
+### ****Upgrade the Grafana server using Helm****
+
+### ****Add the Prometheus data source in Grafana****
