@@ -325,14 +325,20 @@ cd grafana_install_directory
 
 ![SigV4 Auth 설정 이미지-1](Image_source/Untitled.png)
 
+<br>
+
 ![SigV4 Auth 설정 이미지-2](Image_source/Untitled%201.png)
 
 - 설정 예시 이미지
 - 설정 완료 후, 아래의 샘플 쿼리 실행 (PromQL)
 
+<br>
+
 ```bash
 prometheus_tsdb_head_series
 ```
+
+<br>
 
 ### ****Troubleshooting if Save & Test doesn't work****
 
