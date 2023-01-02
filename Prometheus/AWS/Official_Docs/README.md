@@ -221,6 +221,7 @@ helm install prometheus-chart-name prometheus-community/prometheus -n prometheus
 - Multiple replicas 구성을 위해서는 명시적으로 다른 레플리카 값으로 여러번 배포해야함
   - replica 라벨에 대해 auto-set 적용을 위해서는 prometheus-operator Helm chart 활용 필요
 
+<br>
 
 ```yaml
 server:
@@ -229,6 +230,8 @@ server:
           cluster: monitoring-cluster
           __replica__: replica-1
 ```
+
+<br>
 
 # **Query your Prometheus metrics**
 
