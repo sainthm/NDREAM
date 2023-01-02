@@ -283,10 +283,14 @@ server:
 
 - 그라파나 7.3.5 버전 및 그 이후 버전 지원
 
+<br>
+
 ### ****Set up AWS SigV4****
 
 - 자체 관리 그라파나 or 그라파나 엔터프라이즈 서버를 사용할 경우 아래 절차 진행
 - 그라파나 데이터 소스에 대한 SigV4 인증을 통한 AMP 인증 & 인가 capability 강화 가능
+
+<br>
 
 ```bash
 # Linux
@@ -299,6 +303,8 @@ cd grafana_install_directory
 ./bin/grafana-server
 ```
 
+<br>
+
 ```bash
 # Windows
 set AWS_SDK_LOAD_CONFIG=true
@@ -309,6 +315,8 @@ cd grafana_install_directory
 
 .\bin\grafana-server.exe
 ```
+
+<br>
 
 ## ****Add the Prometheus data source in Grafana****
 
