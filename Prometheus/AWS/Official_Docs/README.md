@@ -271,12 +271,11 @@ server:
 
 - AMP는 AMG를 연결하기 위한 서비스 엔드포인트 제공
 - Private VPC에서 AMG를 설정 가능
-    - 해당 VPC는 AMP 서비스 엔드포인트에 액세스 불가능
-    - 이를 해결하기위해서는 specific private VPC 활용 필요
-        - AMP를 VPC 엔드포인트(interface endpoint)가 있는 동일한 VPC에 연결
-            
-            [Using Amazon Managed Service for Prometheus with interface VPC endpoints](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-and-interface-VPC.html#create-VPC-endpoint-for-AMP)
-            
+  - 해당 VPC는 AMP 서비스 엔드포인트에 액세스 불가능
+  - 이를 해결하기위해서는 specific private VPC 활용 필요
+    - AMP를 VPC 엔드포인트(interface endpoint)가 있는 동일한 VPC에 연결
+    - [Using Amazon Managed Service for Prometheus with interface VPC endpoints](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-and-interface-VPC.html#create-VPC-endpoint-for-AMP)
+
 
 <br>
 
