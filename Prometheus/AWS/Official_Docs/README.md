@@ -1,6 +1,8 @@
 # [공식사용자가이드]Amazon Managed Service for Prometheus
 
 - 노션 페이지 생성일: 2022.12.27
+- 깃헙 업로드 및 수정일: 2022.01.02 (내용 추가 및 수정 진행중)
+
 
 <br>
 
@@ -349,6 +351,9 @@ prometheus_tsdb_head_series
 - 프로메테우스
 
 ![Untitled](Image_source/Untitled%202.png)
+
+<brs>
+<br>
 
 - 그라파나
 
