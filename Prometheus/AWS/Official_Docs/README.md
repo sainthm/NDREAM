@@ -265,6 +265,8 @@ server:
 - AMG 콘솔에서 AMP 워크스페이스를 데이터 소스로 선택 가능
 - AMP의 alert 들을 AMG에서 확인 가능
 
+<br>
+
 ### ****Connecting to Amazon Managed Grafana in a private VPC****
 
 - AMP는 AMG를 연결하기 위한 서비스 엔드포인트 제공
@@ -275,6 +277,8 @@ server:
             
             [Using Amazon Managed Service for Prometheus with interface VPC endpoints](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-and-interface-VPC.html#create-VPC-endpoint-for-AMP)
             
+
+<br>
 
 ### Set up Grafana open source or Grafana Enterprise for use with Amazon Managed Service for Prometheus
 
