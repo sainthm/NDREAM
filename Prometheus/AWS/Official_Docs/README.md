@@ -352,12 +352,15 @@ prometheus_tsdb_head_series
 
 ![Untitled](Image_source/Untitled%202.png)
 
-<brs>
+<br>
 <br>
 
 - 그라파나
 
 ![Untitled](Image_source/Untitled%203.png)
+
+<br>
+<br>
 
 ## **Query using Grafana running in an Amazon EKS cluster**
 
@@ -367,9 +370,11 @@ prometheus_tsdb_head_series
     - `aps:GetSeries`
     - `aps:GetLabels`
 
+<br>
+
 ### ****Set up AWS SigV4****
 
-```bash
+```yaml
 # amp_query_override_values.yaml - grafana 설정 파일에 아래 내용 추가
 
 # annotations 항목 수정 필요
@@ -385,6 +390,8 @@ grafana.ini:
     sigv4_auth_enabled: true
 ```
 
+<br>
+
 ### ****Set up IAM roles for service accounts****
 
 - Grafana 서버를 EKS 클러스터에서 돌린다면 service account IAM role 사용을 권장 (service role)
@@ -397,6 +404,13 @@ grafana.ini:
     
 - 준비되었다면 grafana service account를 신뢰 관계
 
+<br>
+
 ### ****Upgrade the Grafana server using Helm****
 
+<br>
+
 ### ****Add the Prometheus data source in Grafana****
+
+<br>
+<br>
