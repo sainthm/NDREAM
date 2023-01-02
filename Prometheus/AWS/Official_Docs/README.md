@@ -232,6 +232,7 @@ server:
 ```
 
 <br>
+<br>
 
 # **Query your Prometheus metrics**
 
@@ -242,16 +243,22 @@ server:
 
 [Querying basics | Prometheus](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 
+<br>
+
 ### Securing your metric queries
 
 - Public internet endpoint 활용
 - AWS PrivateLink 활용
+
+<br>
 
 ### Authentication and authorization
 
 - IAM 사용
     - AMP 생성 중 IAM Role 생성 (Grafana server 에서 AMP 워크스페이스 지표 쿼리 허용 관련)
 - AWS SigV4 사용
+
+<br>
 
 ### **Set up Amazon Managed Grafana for use with Amazon Managed Service for Prometheus**
 
