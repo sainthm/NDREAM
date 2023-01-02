@@ -149,6 +149,8 @@ Remote write enables the sending of samples to a remote storage destination.
 3. Set up IAM roles for service accounts
 4. Set up the new server and start ingesting metrics
 
+<br>
+
 ```yaml
 # yaml 파일
 
