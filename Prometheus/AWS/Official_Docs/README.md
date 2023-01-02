@@ -323,9 +323,9 @@ cd grafana_install_directory
 
 [Set up Grafana open source or Grafana Enterprise for use with Amazon Managed Service for Prometheus](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-query-standalone-grafana.html#AMP-onboard-query-standalone-grafana-datasource)
 
-![SigV4 Auth 설정 이미지-1](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled.png)
+![SigV4 Auth 설정 이미지-1](Image_source/Untitled.png)
 
-![SigV4 Auth 설정 이미지-2](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled%201.png)
+![SigV4 Auth 설정 이미지-2](Image_source/Untitled%201.png)
 
 - 설정 예시 이미지
 - 설정 완료 후, 아래의 샘플 쿼리 실행 (PromQL)
@@ -342,11 +342,11 @@ prometheus_tsdb_head_series
 
 - 프로메테우스
 
-![Untitled](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled%202.png)
+![Untitled](Image_source/Untitled%202.png)
 
 - 그라파나
 
-![Untitled](%5B%E1%84%80%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B5%E1%86%A8%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%5DAmazon%20Managed%20Service%20for%20Pr%20a49bcbfb605344b7b11a47f854a62014/Untitled%203.png)
+![Untitled](Image_source/Untitled%203.png)
 
 ## **Query using Grafana running in an Amazon EKS cluster**
 
