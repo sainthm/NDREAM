@@ -420,11 +420,18 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_query_override_values.yaml
 ```
 
-
 <br>
 
 ### ****Add the Prometheus data source in Grafana****
 
+#### Process:
+1. 그라파나 콘솔 오픈
+2. Configurations -> Data sources 선택
+3. 
+
+
 <br>
+
+
 <br>
 
