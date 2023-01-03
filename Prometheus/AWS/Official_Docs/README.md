@@ -458,6 +458,117 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
 
 - 한 달 동안 실행된 쿼리 샘플의 총 수로 쿼리 비용 발생
 
+<br>
+
+### samples 오브젝트는 아래의 attributes로 구성:
+
+- totalQueryableSamples
+- totalQueryableSamplesPerStep
 
 <br>
 
+예시:
+
+### Example for query:
+
+```bash
+endpoint/api/v1/query?query=up&time=1652382537&stats=all
+```
+
+<br>
+
+```json
+{
+    "status": "success",
+    "data": {
+        "resultType": "vector",
+        "result": [
+            {
+                "metric": {
+                    "__name__": "up",
+                    "instance": "localhost:9090",
+                    "job": "prometheus"
+                },
+                "value": [
+                    1652382537,
+                    "1"
+                ]
+            }
+        ],
+        "stats": {
+            "timings": {
+                "evalTotalTime": 0.00453349,
+                "resultSortTime": 0,
+                "queryPreparationTime": 0.000019363,
+                "innerEvalTime": 0.004508405,
+                "execQueueTime": 0.000008786,
+                "execTotalTime": 0.004554219
+            },
+            "samples": {
+                "totalQueryableSamples": 1,
+                "totalQueryableSamplesPerStep": [
+                    [
+                        1652382537,
+                        1
+                    ]
+                ]
+            }
+        }
+    }
+}
+```
+<br>
+
+### Example for queryrange:
+
+```bash
+endpoint/api/v1/query_range?query=sum+%28rate+%28go_gc_duration_seconds_count%5B1m%5D%29%29&start=1652382537&end=1652384705&step=1000&stats=all
+```
+
+<br>
+
+```json
+{
+    "status": "success",
+    "data": {
+        "resultType": "matrix",
+        "result": [
+            {
+                "metric": {},
+                "values": [
+                    [
+                        1652383000,
+                        "0"
+                    ],
+                    [
+                        1652384000,
+                        "0"
+                    ]
+                ]
+            }
+        ],
+        "stats": {
+            "samples": {
+                "totalQueryableSamples": 8,
+                "totalQueryableSamplesPerStep": [
+                    [
+                        1652382000,
+                        0
+                    ],
+                    [
+                        1652383000,
+                        4
+                    ],
+                    [
+                        1652384000,
+                        4
+                    ]
+                ]
+            }
+        }
+    }
+}
+```
+
+
+## Managing
