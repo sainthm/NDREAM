@@ -410,9 +410,19 @@ grafana.ini:
 
 ### ****Upgrade the Grafana server using Helm****
 
+- amp_query_override_values.yaml 파일을 이용한 그라파나 서버 업그레이드 관련 내용
+
+```bash
+helm repo add grafana https://grafana.github.io/helm-charts
+
+helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_query_override_values.yaml
+```
+
+
 <br>
 
 ### ****Add the Prometheus data source in Grafana****
 
 <br>
 <br>
+
