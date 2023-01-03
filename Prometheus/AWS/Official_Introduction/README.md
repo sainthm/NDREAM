@@ -69,12 +69,12 @@ High-cardinality variables can be challenging to work with in data analysis, bec
 - 고가용성과 멀티존 배포, 통합 보안 제공
 - PromQL 지원
 - AWS 관리 파트:
-    - (일부) 보안
-    - Scalability
-    - Availability
+  - (일부) 보안
+  - Scalability
+  - Availability
 - Handle the high cardinality (large number of arbitrary tags)
 - CNCF-hosted 프로젝트와 100% compatible 제공
 - Seamlessly integrates with the Amazon Managed Grafana
-    - Data visualization
-    - Team management authentication
-    - Authorization
+  - Data visualization
+  - Team management authentication
+  - Authorization
