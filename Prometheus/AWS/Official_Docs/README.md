@@ -414,7 +414,9 @@ grafana.ini:
 
 ```bash
 helm repo add grafana https://grafana.github.io/helm-charts
+```
 
+```bash
 helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_query_override_values.yaml
 ```
 
