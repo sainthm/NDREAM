@@ -468,7 +468,7 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
 <br>
 
 
-### Example for ***query***:
+### Example for ```diff - ***query***```:
 
 ```bash
 endpoint/api/v1/query?query=up&time=1652382537&stats=all
