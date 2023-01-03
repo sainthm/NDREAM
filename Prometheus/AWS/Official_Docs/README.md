@@ -422,9 +422,8 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
 
 <br>
 
-### ****Add the Prometheus data source in Grafana****
+### **Add the Prometheus data source in Grafana <Process>**
 
-#### Process:
 
 1. 그라파나 콘솔 오픈
 2. Configurations -> Data sources 선택
