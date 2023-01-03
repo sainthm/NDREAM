@@ -62,10 +62,10 @@ High-cardinality variables can be challenging to work with in data analysis, bec
 - Serverless monitoring service
 - Powered by Cortex
 - 대상:
-    - Amazon Elastic Kubernetes Service
-    - Amazon Elastic Container Service
-    - AWS Fargate (as well as)
-    - Self-managed Kubernetes clusters
+  - Amazon Elastic Kubernetes Service
+  - Amazon Elastic Container Service
+  - AWS Fargate (as well as)
+  - Self-managed Kubernetes clusters
 - 고가용성과 멀티존 배포, 통합 보안 제공
 - PromQL 지원
 - AWS 관리 파트:
