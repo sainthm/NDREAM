@@ -523,7 +523,6 @@ endpoint/api/v1/query?query=up&time=1652382537&stats=all
 
 ```bash
 # GET
-
 endpoint/api/v1/query_range?query=sum+%28rate+%28go_gc_duration_seconds_count%5B1m%5D%29%29&start=1652382537&end=1652384705&step=1000&stats=all
 ```
 
