@@ -471,6 +471,7 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
 ### Example for ***query***:
 
 ```bash
+# GET
 endpoint/api/v1/query?query=up&time=1652382537&stats=all
 ```
 
@@ -521,6 +522,8 @@ endpoint/api/v1/query?query=up&time=1652382537&stats=all
 ### Example for ***queryrange***:
 
 ```bash
+# GET
+
 endpoint/api/v1/query_range?query=sum+%28rate+%28go_gc_duration_seconds_count%5B1m%5D%29%29&start=1652382537&end=1652384705&step=1000&stats=all
 ```
 
