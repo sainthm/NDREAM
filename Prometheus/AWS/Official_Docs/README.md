@@ -424,10 +424,21 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
 
 ### **Add the Prometheus data source in Grafana**
 
-
 1. 그라파나 콘솔 오픈
 2. Configurations -> Data sources 선택
-3. 
+3. Add data source 선택
+4. Prometheus 선택
+5. HTTP URL을 위하여, Endpoint - query URL 선택
+6. HTTP URL 항목에서 /api/v1/query 부분 삭제 (프로메테우스가 자동으로 갱신)
+7. Auth 항목에서 SigV4 Auth 활성화
+8. Save & Test 선택
+9. 새로운 데이터 소스에 대해, PromQL로 쿼리 테스트 진행
+- Explore 선택
+- 아래의 샘플 PromQL 쿼리 실행
+
+  ```bash
+  prometheus_tsdb_head_series
+  ```
 
 
 <br>
