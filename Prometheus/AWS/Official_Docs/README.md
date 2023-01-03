@@ -571,5 +571,12 @@ endpoint/api/v1/query_range?query=sum+%28rate+%28go_gc_duration_seconds_count%5B
 }
 ```
 
+<br>
 
-## Managing
+# Managing workspaces
+
+[Managing workspaces](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-manage-ingest-query.html)
+
+- 일단 여기까지 작성
+
+<br>
