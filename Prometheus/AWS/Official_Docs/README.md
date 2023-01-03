@@ -451,3 +451,8 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
 
 <br>
 
+
+## Query stats information in query API response
+
+<br>
+
