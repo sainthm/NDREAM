@@ -455,6 +455,7 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
 ## Query stats information in query API response
 
 - 한 달 동안 실행된 쿼리 샘플의 총 수로 쿼리 가격 발생
+
   [Amazon Managed Service for Prometheus pricing](https://aws.amazon.com/ko/prometheus/pricing/)
 
 <br>
