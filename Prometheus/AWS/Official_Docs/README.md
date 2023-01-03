@@ -440,9 +440,14 @@ helm upgrade --install grafana grafana/grafana -n grafana_namespace -f ./amp_que
   prometheus_tsdb_head_series
   ```
 
+<br>
+
+## Query using Prometheus-compatible APIs
+[Prometheus-compatible APIs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-APIReference.html#AMP-APIReference-Prometheus-Compatible-Apis)
 
 <br>
 
+### Using awscurl to query Prometheus-compatible APIs
 
 <br>
 
