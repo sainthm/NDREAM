@@ -1,0 +1,21 @@
+############
+#git .ignore
+############
+
+.DS_Store
+
+*.pem
+
+*.zip
+
+*.jpg
+
+*.jpeg
+
+*.pdf
+
+*.png
+
+*.csv
+
+__pycache__
