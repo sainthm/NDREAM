@@ -1,6 +1,6 @@
 # CS Folder
 
-- Computer Science
+- For basic CS (Computer Science)
 
 
 
