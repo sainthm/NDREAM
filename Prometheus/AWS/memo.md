@@ -23,3 +23,10 @@ helm repo update
 ```bash
 kubectl create namespace prometheus-namespace
 ```
+
+<br>
+
+### 3단계: 서비스 계정에 대한 IAM 역할 설정
+
+- 관련링크: [서비스 계정에 대한 IAM 역할](https://docs.aws.amazon.com/ko_kr/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest)
+- 
