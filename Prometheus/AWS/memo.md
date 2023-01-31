@@ -5,3 +5,21 @@
 aws eks describe-cluster --name eks-cluster-xxx --query "cluster.roleArn"
 
 "arn:aws:iam::xxxxxxxxx:role/eksctl-eks-cluster-xx-cluster-ServiceRole-1Q6LCxxxxxxxx"
+
+<br>
+
+### 1단계: 새 Helm 차트 리포지토리를 추가합니다
+
+```bash
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add kube-state-metrics https://kubernetes.github.io/kube-state-metrics
+helm repo update
+```
+
+<br>
+
+### 2단계: Prometheus 네임스페이스 생성
+
+```bash
+kubectl create namespace prometheus-namespace
+```
