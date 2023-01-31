@@ -29,4 +29,11 @@ kubectl create namespace prometheus-namespace
 ### 3단계: 서비스 계정에 대한 IAM 역할 설정
 
 - 관련링크: [서비스 계정에 대한 IAM 역할](https://docs.aws.amazon.com/ko_kr/prometheus/latest/userguide/set-up-irsa.html#set-up-irsa-ingest)
-- 
+
+#### Process
+
+1. 역할 생성을 위한 계정 로그인
+2. 스크립트 준비
+  - For the ingestion of metrics
+  - For the querying of metrics
+3. 스크립트 실행을 통한 역할 생성
