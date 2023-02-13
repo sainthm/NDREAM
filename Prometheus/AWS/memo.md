@@ -37,3 +37,15 @@ kubectl create namespace prometheus-namespace
    - For the ingestion of metrics
    - For the querying of metrics
 3. 스크립트 실행을 통한 역할 생성
+
+
+Set up IAM roles for service accounts
+
+
+
+aws eks describe-cluster --name eks-cluster-ms05 --query "cluster.identity.oidc.issuer" --output text | sed -e "s/^https:\/\///"
+
+Service accounts에 대한 IAM Role 셋팅
+
+Ingestion of metrics 를 위한 IAM Role 생성
+Querying of metrics 를 위한 IAM Role 생성
