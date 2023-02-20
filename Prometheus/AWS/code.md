@@ -101,3 +101,26 @@ echo "export CLUSTER_NAME=workload" >> delete.env
 echo "export ROLE_NAME=EKS-AMP-ServiceAccount-Role" >> delete.env
 
 echo -e "# Copy this into your Central account terminal:\n\nexport WORKLOAD_ACCOUNT_ID=$WORKLOAD_ACCOUNT_ID\n"
+
+
+
+## EC2 sample yaml
+global:
+  scrape_interval: 15s
+  external_labels:
+    monitor: 'prometheus'
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:8000']
+
+remote_write:
+  -
+    url: https://aps-workspaces.my-region.amazonaws.com/workspaces/my-workspace-id/api/v1/remote_write
+    queue_config:
+        max_samples_per_send: 1000
+        max_shards: 200
+        capacity: 2500
+    sigv4:
+         region: my-region
