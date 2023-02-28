@@ -13,6 +13,9 @@
 
 ## 준비물:
 
+- AWS Account
+  - 로그인 전용 계정 (메인 로그인 계정)
+  - 서비스 전용 계정
 - MFA Serial
   - Serial 값 확인 방법(메인 로그인 계정): AWS >> IAM >> Users >> Specific user >> Security credentials >> MFA >> Identifier
   - arn:aws:iam::123412341234:mfa/xxxx (xxxx 항목에는 다양한 값 가능: Authy 등)
@@ -21,6 +24,11 @@
 <br>
 
 ## 환경정보:
+
+- A 계정: 로그인 전용 계정 >> 해당 어카운트로 로그인(MFA)만 진행 >> 로그인 후, 다른 서비스 계정으로 **switch role**!!
+- B 계정: 서비스 전용 계정 >> A 계정에서 switching 해서 넘어가는 계정 >> B 계정은 수량이 많아질 수 있음!!
+
+
 
 <br>
 
