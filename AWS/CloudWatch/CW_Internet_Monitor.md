@@ -64,6 +64,23 @@
 - Internet traffic overview
   - 위에서 빨갛게 찍힌 영역에 대해, 세계지도위에 이슈 마크로 출력
   - 마우스 커서를 올려보면, Impact on traffic 항목이 출력 (영향도가 퍼센트로 나옴, 확인한 사항은 17.21%, 연계로 Performance score는 82.56% 으로 감소)
+- Health events
+  - 해당 항목에서는 영향에 대해, 아래의 컬럼에 대한 값을 보여줌
+    - Client location (ex. Kansas City, Missouri, United States)
+    - Client network (ex. 특정 플랫폼)
+    - Service location (ex. us-west-2 [리전])
+    - Traffic impact (ex. 17.21%)
+    - Impact type (ex. Internet performance issue)
+- Select an event location to see more details
+  - 위의 항목에서 Client location 의 특정 지역을 클릭하면 출력
+  - 아래의 항목에 대해, 값이 출력됨
+    - Past event (Started at / Ended)
+    - Event duration (ex. 00h 05m 00s)
+    - Impact to overall traffic (ex. 17.21%)
+    - Imapct at selected client location (ex. 100%)
+    - Imapairment alaysis
+      - Event status (ex. resloved)
+      - Imparment tpye (ex. Performance)
 
 
 <br>
