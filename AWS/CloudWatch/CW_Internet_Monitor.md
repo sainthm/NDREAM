@@ -127,6 +127,48 @@
     - CityNetworksFor100PercentTraffic (100%에 대한 값을 출력)
     - CityNetworksMonitored (실제 값을 출력)
 - Top 10 client locations
-  - View the 10 highest (or lowest) client locations based on total monitored traffic by bytes.
+  - 말 그대로 Top 10 출력 (반대로 Worst 10도 출력 가능)
+  - Sorting 조건은 아래의 세 가지 이며, 상세한 설정은 조건 밑에 서술
+    - Sorting field
+      - Total traffic
+      - Total traffic in
+      - Total traffic out
+      - Average TTFB
+      - Availability score
+      - Performance score
+    - Granularity (생전 처음 보는 단어, 사전 상 의미는 "낟알 모양, 입상(粒狀); 입도(粒度)" 라고 나오지만 이렇게 쓰고 **세부사항** 혹은 **부분** , **명세** 로 읽어도 문제는 없어보임)
+      - City
+      - Subdivision
+      - Country
+      - Metro
+    - Sorting order
+      - Highest to lowest
+      - Lowest to highest
+- Traffic optimization suggestions
+  - Top 네트워크에 대해, 셋업 추천
+  - EC2 / CloudFront 두 가지 서비스에 대해, include 선택 가능
+
+<br>
+
+### Monitor details
+
+- 생성한 CW Internet Monitor 에 대한, 설정 정보를 확인 가능
+- Monitor details
+  - Monitor name
+  - Monitor ARN
+  - Status info
+  - Monitoring limit
+  - Status
+  - Created at
+  - Modified at
+- Monitored resources
+  - Resource ID
+  - Resource name
+  - Service (EC2 / CloudFront)
+  - AWS Region (CloudFront 의 경우, 공란)
+  - Account ID
+- Tags
+  - 설정한 태그 확인 가능
+
 
 <br>
