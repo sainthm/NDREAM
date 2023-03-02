@@ -126,6 +126,7 @@
   - 아래의 두 개의 값에 대한 그래프 출력
     - CityNetworksFor100PercentTraffic (100%에 대한 값을 출력)
     - CityNetworksMonitored (실제 값을 출력)
-
+- Top 10 client locations
+  - View the 10 highest (or lowest) client locations based on total monitored traffic by bytes.
 
 <br>
