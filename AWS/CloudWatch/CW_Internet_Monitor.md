@@ -95,7 +95,7 @@
   - Performance score
   - Availability score
   - Bytes transferred
-  - Round-trip time
+  - Round-trip time (RTT): 말 그대로 왕복 (Request to return a response)
 - All events
   - Lists health events for your application. For example, traffic impact of N% for a health event for Location C and ISP A means that N% of traffic from CloudFront towards Location C over ISP A is experiencing an availability or performance drop. 
   - (Note that when service location is a Region, measurements and events represent connectivity at a Regional level, **not between end-user locations** and Availability Zones.)
@@ -103,6 +103,29 @@
 
 <br>
 
+
+### Traffic insights
+
+- Traffic insights filter
+  - 아래의 항목에 대해, 필터링 설정 가능
+    - AWS location
+    - Country
+    - Subdivision
+    - Metro
+    - City
+    - Network providers
+- Overall traffic
+  - 아래의 항목에 대해, 데이터 출력
+    - Total traffic (bytes)
+    - Total traffic in (bytes)
+    - Total traffic out (bytes)
+    - Average TTFB (Time To First Byte: HTTP 요청을 했을 때, 처음 byte[정보]가 브라우저에 도달하는 시간)
+    - Availability score
+    - Performance score
+- City-networks traffic monitoring
+  - 아래의 두 개의 값에 대한 그래프 출력
+    - CityNetworksFor100PercentTraffic (100%에 대한 값을 출력)
+    - CityNetworksMonitored (실제 값을 출력)
 
 
 <br>
