@@ -45,4 +45,25 @@
 ## 설정에 대한 AWS 가이드
 
 - Internet monitor를 배포한 순간부터, Internet Monitor에서는 자동으로 애플리케이션의 리소스 로그에 따라 데이터를 수집하기 시작
--  VPC Flow Logs, CloudFront 로그 또는 기타 로그 유형을 활성화하거나 비용을 지불할 필요가 없습니다.
+- VPC Flow Logs, CloudFront 로그 또는 기타 로그 유형을 활성화하거나 비용을 지불할 필요 X
+
+
+
+<br>
+
+## 설정된 사항에 대해, 확인한 사항
+
+- Health scores
+  - 5분 단위로 찍히는 것으로 보임
+  - UTC 및 로컬 타임존은 당연히 지원
+  - 이슈가 생기면 빨간 영역으로 찍힘
+  - 지원 항목은 아래 세 개로 보임
+    - Availability score
+    - Performance score
+    - Helath event score < 95%
+- Internet traffic overview
+  - 위에서 빨갛게 찍힌 영역에 대해, 세계지도위에 이슈 마크로 출력
+  - 마우스 커서를 올려보면, Impact on traffic 항목이 출력 (영향도가 퍼센트로 나옴, 확인한 사항은 17.21%, 연계로 Performance score는 82.56% 으로 감소)
+
+
+<br>
