@@ -53,6 +53,10 @@
 
 ## 설정된 사항에 대해, 확인한 사항
 
+<br>
+
+### Overview
+
 - Health scores
   - 5분 단위로 찍히는 것으로 보임
   - UTC 및 로컬 타임존은 당연히 지원
@@ -81,6 +85,24 @@
     - Imapairment alaysis
       - Event status (ex. resloved)
       - Imparment tpye (ex. Performance)
+
+<br>
+
+### Historical explorer
+
+- 출력 결과에 대한 추세를 이해하고 해당 위치 및 네트워크 제공업체와 관련된 이전 데이터 참조 가능
+- 최대 18개월 전까지 아래의 데이터 확인 가능
+  - Performance score
+  - Availability score
+  - Bytes transferred
+  - Round-trip time
+- All events
+  - Lists health events for your application. For example, traffic impact of N% for a health event for Location C and ISP A means that N% of traffic from CloudFront towards Location C over ISP A is experiencing an availability or performance drop. 
+  - (Note that when service location is a Region, measurements and events represent connectivity at a Regional level, **not between end-user locations** and Availability Zones.)
+
+
+<br>
+
 
 
 <br>
