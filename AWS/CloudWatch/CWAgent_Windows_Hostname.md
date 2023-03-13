@@ -60,3 +60,118 @@
 
 
 <br>
+
+
+## 아래와 같이 설정 파일 변경
+
+<br>
+
+```json
+{
+   "metrics":{
+      "aggregation_dimensions":[
+         [
+            "InstanceId"
+         ]
+      ],
+      "append_dimensions":{
+         "AutoScalingGroupName":"${aws:AutoScalingGroupName}",
+         "ImageId":"${aws:ImageId}",
+         "InstanceId":"${aws:InstanceId}",
+         "InstanceType":"${aws:InstanceType}"
+      },
+      "metrics_collected":{
+         "Windows":{
+            "metric_sets":[
+               {
+                  "name":"Hostname",
+                  "dimensions":[
+                     {
+                        "Name":"ServerName",
+                        "Value":"${env:COMPUTERNAME}"
+                     }
+                  ],
+                  "metrics":[
+                     {
+                        "name":"HostName",
+                        "rename":"HostName",
+                        "unit":"None",
+                        "expression":"HOSTNAME",
+                        "namespace":"CustomMetric/Windows"
+                     }
+                  ]
+               }
+            ],
+            "metrics_collection_interval":60
+         },
+         "LogicalDisk":{
+            "measurement":[
+               "% Free Space"
+            ],
+            "metrics_collection_interval":60,
+            "resources":[
+               "*"
+            ]
+         },
+         "Memory":{
+            "measurement":[
+               "% Committed Bytes In Use"
+            ],
+            "metrics_collection_interval":60
+         },
+         "Paging File":{
+            "measurement":[
+               "% Usage"
+            ],
+            "metrics_collection_interval":60,
+            "resources":[
+               "*"
+            ]
+         },
+         "PhysicalDisk":{
+            "measurement":[
+               "% Disk Time",
+               "Disk Write Bytes/sec",
+               "Disk Read Bytes/sec",
+               "Disk Writes/sec",
+               "Disk Reads/sec"
+            ],
+            "metrics_collection_interval":60,
+            "resources":[
+               "*"
+            ]
+         },
+         "Processor":{
+            "measurement":[
+               "% User Time",
+               "% Idle Time",
+               "% Interrupt Time"
+            ],
+            "metrics_collection_interval":60,
+            "resources":[
+               "*"
+            ]
+         },
+         "TCPv4":{
+            "measurement":[
+               "Connections Established"
+            ],
+            "metrics_collection_interval":60
+         },
+         "TCPv6":{
+            "measurement":[
+               "Connections Established"
+            ],
+            "metrics_collection_interval":60
+         },
+         "statsd":{
+            "metrics_aggregation_interval":60,
+            "metrics_collection_interval":60,
+            "service_address":":8125"
+         }
+      }
+   }
+}
+```
+
+<br>
