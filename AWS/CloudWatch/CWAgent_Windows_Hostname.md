@@ -4,6 +4,11 @@
 
 <br>
 
+# 잘 안 됨 !!!!!!
+
+
+<br>
+
 ## CWAgent 를 활용하여 hostname 전달 (테스트)
 
 - 사전에 CWAgent 설치 및 기본 설정 파일(config.json)을 통해, CWAgent는 **Running** 상태임을 가정
@@ -82,28 +87,28 @@
       },
       "metrics_collected":{
          "Windows":{
-            "metric_sets":[
-               {
-                  "name":"Hostname",
-                  "dimensions":[
-                     {
-                        "Name":"ServerName",
-                        "Value":"${env:COMPUTERNAME}"
-                     }
-                  ],
-                  "metrics":[
-                     {
-                        "name":"HostName",
-                        "rename":"HostName",
-                        "unit":"None",
-                        "expression":"HOSTNAME",
-                        "namespace":"CustomMetric/Windows"
-                     }
-                  ]
-               }
-            ],
-            "metrics_collection_interval":60
-         },
+                   "metric_sets":[
+                      {
+                         "name":"Hostname",
+                         "dimensions":[
+                            {
+                               "Name":"ServerName",
+                               "Value":"${env:COMPUTERNAME}"
+                            }
+                         ],
+                         "metrics":[
+                            {
+                               "name":"HostName",
+                               "rename":"HostName",
+                               "unit":"None",
+                               "expression":"HOSTNAME",
+                               "namespace":"CustomMetric/Windows"
+                            }
+                         ]
+                      }
+                   ],
+                   "metrics_collection_interval":60
+                },
          "LogicalDisk":{
             "measurement":[
                "% Free Space"
@@ -173,5 +178,8 @@
    }
 }
 ```
+       
+
+       
 
 <br>
