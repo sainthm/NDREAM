@@ -1,2 +1,11 @@
 # Mountpoint for Amazon S3
 
+## 관련 URL:
+
+- [Introducing Mountpoint for Amazon S3, a high performance open source file client](https://aws.amazon.com/ko/about-aws/whats-new/2023/03/mountpoint-amazon-s3/?fbclid=IwAR1idVRkUegyCAMn3XH2zZokSZGp5ZSjGUgxZxNUJzanMiipa1C4biDxATI)
+
+- AWS Blog: [The inside story on Mountpoint for Amazon S3, a high-performance open source file client](https://aws.amazon.com/ko/blogs/storage/the-inside-story-on-mountpoint-for-amazon-s3-a-high-performance-open-source-file-client/?fbclid=IwAR2Gs-PGa2ufSnfo89CXXSGA_FpNMhQYwJFuejs5GMBmGrervrwEulJUqA8)
+
+
+
+<br>
